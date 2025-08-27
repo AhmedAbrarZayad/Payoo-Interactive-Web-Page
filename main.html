@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="flex justify-between items-center p-4 bg-white">
+        <div class="flex items-center">
+            <img src="assets/Group.png" alt="Group Image"/>
+            <div>
+                <h1 class="outfit-extrabold" id="balance">$45000</h1>
+                <h3 class="light-dark">Available Balance</h3>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-lg flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+                </svg>
+                Log Out
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="text-center mt-10">
+            <h1 class="outfit-extrabold">🔥 Welcome to Payoo</h1>
+            <p class="light-dark text-left px-5 sm:text-center">Enjoy easy and convenient financial services with us. Cashout charge is low and transparent.</p>
+            <div class="cards grid grid-cols-3 grid-rows-2 gap-5 p-10 h-[300px]">
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Add-Money">
+                    <figure>
+                        <img
+                        src="assets/money1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Add Money</h1>
+                </div>
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Cashout">
+                    <figure>
+                        <img
+                        src="assets/purse1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Cashout</h1>
+                </div>
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Transfer-Money">
+                    <figure>
+                        <img
+                        src="assets/send1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Transfer Money</h1>
+                </div>
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Get-Bonus">
+                    <figure>
+                        <img
+                        src="assets/bonus1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Get Bonus</h1>
+                </div>
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Pay-Bill">
+                    <figure>
+                        <img
+                        src="assets/wallet1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Pay Bill</h1>
+                </div>
+                <div class="card bg-base-100 w-[100%] shadow-sm flex flex-col justify-center" id="Transactions">
+                    <figure>
+                        <img
+                        src="assets/transaction1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <h1>Transactions</h1>
+                </div>
+            </div>
+        </div>
+        <div class="all-forms-container flex flex-col w-full">
+            <div class="form-container" id="Add-Money-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Add Money</h1>
+                <form class="flex flex-col gap-4 bg-white rounded-3xl shadow-lg p-8 mb-2 max-w-md w-full mx-auto">
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Select a Bank</legend>
+                        <select class="select w-full rounded-2xl" id="select-bank">
+                            <option selected>Pick a bank</option>
+                            <option>Bank A</option>
+                            <option>Bank B</option>
+                            <option>Bank C</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Bank Account Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="account-number"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Amount to Add</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="amount-to-add"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="pin-number"/>
+                    </fieldset>
+                    <button class="btn bg-blue-700 text-white w-full rounded-2xl mt-4" id="add-money-btn">Add Money</button>
+                </form>
+            </div>
+            <div class="form-container" id="Cashout-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Cashout</h1>
+                <form class="flex flex-col gap-4 bg-white rounded-3xl shadow-lg p-8 mb-2 max-w-md w-full mx-auto">
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Agent Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="account-number"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Amount</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="amount-to-send"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="pin-number"/>
+                    </fieldset>
+                    <button class="btn bg-blue-700 text-white w-full rounded-2xl mt-4" id="withdraw-money-btn">Withdraw Money</button>
+                </form>
+            </div>
+            <div class="form-container" id="Transfer-Money-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Transfer Money</h1>
+                <form class="flex flex-col gap-4 bg-white rounded-3xl shadow-lg p-8 mb-2 max-w-md w-full mx-auto">
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">User Account Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="account-number"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Amount</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="amount-to-add"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="pin-number"/>
+                    </fieldset>
+                    <button class="btn bg-blue-700 text-white w-full rounded-2xl mt-4" id="transfer-money-btn">Send Now</button>
+                </form>
+            </div>
+            <div class="form-container" id="Get-Bonus-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Get Bonus</h1>
+                <form class="flex flex-col gap-4 bg-white rounded-3xl shadow-lg p-8 mb-2 max-w-md w-full mx-auto">
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Enter Bonus Coupon</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="bonus-coupon"/>
+                    </fieldset>
+                    <button class="btn bg-blue-700 text-white w-full rounded-2xl mt-4" id="add-money-btn">Get Bonus</button>
+                </form>
+            </div>
+            <div class="form-container" id="Pay-Bill-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Pay Bill</h1>
+                <form class="flex flex-col gap-4 bg-white rounded-3xl shadow-lg p-8 mb-2 max-w-md w-full mx-auto">
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Select a Bank</legend>
+                        <select class="select w-full rounded-2xl" id="select-bank">
+                            <option selected>Pick a bank</option>
+                            <option>Bank A</option>
+                            <option>Bank B</option>
+                            <option>Bank C</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Agent Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="account-number"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Amount</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="amount-to-add"/>
+                    </fieldset>
+                    <fieldset class="fieldset w-full flex flex-col items-center">
+                        <legend class="fieldset-legend">Pin Number</legend>
+                        <input type="text" class="input w-full rounded-2xl" placeholder="Type here" id="pin-number"/>
+                    </fieldset>
+                    <button class="btn bg-blue-700 text-white w-full rounded-2xl mt-4" id="add-money-btn">Withdraw Money</button>
+                </form>
+            </div>
+            <div class="form-container" id="Transactions-Container">
+                <h1 class="px-10 outfit-medium sm:text-center">Transaction History</h1>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </main>
+</body>
+</html>
